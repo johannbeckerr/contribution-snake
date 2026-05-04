@@ -207,8 +207,8 @@ def create_snake_path(grid):
             remaining_unvisited = [(col, row, count) for col, row, count in remaining_unvisited 
                                  if (col, row) not in visited]
         else:
-            # ✅ CHANGE 4 — continue instead of break to keep sweeping
-            continue
+            # Remove unreachable position to avoid infinite loop
+            remaining_unvisited.remove(closest)
     
     total_positions = sum(min(rows, len(grid[col])) for col in range(cols))
     coverage = len(visited) / total_positions * 100 if total_positions > 0 else 0

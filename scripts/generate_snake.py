@@ -1,5 +1,5 @@
 self.colors = {
-    'background': '#ff00d9',      # Background color
+    'background': '#0d1117',      # Background color
     'grid': '#21262d',            # Grid line color
     'levels': [                   # Contribution level colors (light to dark)
         '#161b22',                # No contributions
